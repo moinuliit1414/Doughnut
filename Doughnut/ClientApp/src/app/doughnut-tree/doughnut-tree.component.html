@@ -1,0 +1,38 @@
+<!--<h1>Hello, world!</h1>
+<p>Welcome to your new single-page application, built with:</p>
+<!--<p *ngIf="!node"><em>Loading...</em></p>-->
+<div id="wrapper">
+  <div id="container" *ngIf="statement">
+    <ol class="organizational-chart">
+      <li>
+        <div>
+          <h4>{{statement}}</h4>
+        </div>
+        <ol>
+          <li><button (click)="onPositiveClick($event)" type="button">Yes</button></li>
+          <li><button (click)="onNegativeClick($event)" type="button">No</button></li>
+        </ol>
+      </li>
+    </ol>
+  </div>
+
+</div>
+<div xmlns="xhtml" class="centered" *ngIf="node">
+  <ul class="orgchart">
+    <li class="root">
+      <div class="nodecontent selected">{{node?.statement}}</div>
+      <ul>
+        <li class="node">
+          <div _ngcontent-ng-cli-universal-c1>Yes</div>
+          <tree-node [node]="node.leafY" ></tree-node>
+        </li>
+        <li class="node">
+          <div _ngcontent-ng-cli-universal-c1>No</div>
+          <tree-node [node]="node.leafN"></tree-node>          
+        </li>        
+      </ul>
+    </li>
+  </ul>
+</div>
+
+
